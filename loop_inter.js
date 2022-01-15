@@ -75,14 +75,32 @@
 
 // 6 - Write a Program to take a number input from user and find if the number is Prime or not.
 
-var readline = require("readline-sync");
-var n = readline.question("Enter a number ");
-var i;
-if(n%2==0 || n%3==0){
-      console.log("not prime");
-   }else{
-      console.log(" prime"); // another full proof approach divide the input by n-i till i=2
-   }
+// var readline = require("readline-sync");
+// var n = readline.question("Enter a number ");
+// var i;
+// if(n%2==0 || n%3==0){
+//       console.log("not prime");
+//    }else{
+//       console.log(" prime"); // another full proof approach divide the input by n-i till i=2
+//    }
 
 
 // 7 - Write a program to take a day as an input and determine whether it is a weekday or weekend. Example: Tuesday is weekday.
+var readline = require("readline-sync");
+var eday = readline.question("Enter day ");
+
+const days = {
+monday:"weekday",
+tuesday:"weekday",
+wednesday:"weekday",
+thursday:"weekday",
+friday:"weekday",
+saturday:"weekend",
+sunday:"weekend"
+}
+
+for(i=0;i<Object.keys(days).length;i++){
+   if(eday.toLowerCase()==Object.keys(days)[i]){
+      console.log(`${eday} is ${Object.values(days)[i]}`);
+   }
+}
