@@ -88,19 +88,9 @@
 // 7 - Write a program to take a day as an input and determine whether it is a weekday or weekend. Example: Tuesday is weekday.
 var readline = require("readline-sync");
 var eday = readline.question("Enter day ");
-
-const days = {
-monday:"weekday",
-tuesday:"weekday",
-wednesday:"weekday",
-thursday:"weekday",
-friday:"weekday",
-saturday:"weekend",
-sunday:"weekend"
+if(eday.toLowerCase() === "saturday" || eday.toLowerCase() === "sunday"){
+   console.log(`${eday} is weekend`)
 }
-
-for(i=0;i<Object.keys(days).length;i++){
-   if(eday.toLowerCase()==Object.keys(days)[i]){
-      console.log(`${eday} is ${Object.values(days)[i]}`);
-   }
+else {
+   console.log(`${eday} is weekday`)
 }
