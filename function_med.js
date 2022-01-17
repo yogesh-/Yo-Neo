@@ -91,7 +91,7 @@ var dates = [];
         dates.push(new Date("2019/06/26"));
         dates.push(new Date("2019/06/27"));
         dates.push(new Date("2019/06/28"));
-//const dates = [14/5/2019,13/05/2019]
+
 function minDate(){
 const date1 = new Date(Math.min.apply(null,dates));
 const date2 = new Date(Math.max.apply(null,dates));
